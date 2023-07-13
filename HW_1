@@ -1,0 +1,23 @@
+CREATE DATABASE homework_1;
+USE homework_1;
+CREATE TABLE mobile
+(
+	id int not null auto_increment primary key,
+	marka varchar(20),
+    count int,
+    corporation varchar(20),
+    price int
+    );
+    
+insert into mobile (marka,corporation,count, price)
+values ("iPhone" , 'Apple', 4, 2500),
+		("Samsung" , 'samsung', 6, 1500),
+        ("huawei" , 'Huawei', 1, 1000),
+        ("Oppo" , 'oppo', 3, 500);
+        
+select * from mobile;
+select marka, corporation, price from mobile
+where count>2;
+
+select * from mobile
+where marka = 'Samsung';
